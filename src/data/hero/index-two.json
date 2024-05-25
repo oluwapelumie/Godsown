@@ -1,0 +1,50 @@
+[
+  {
+    "subtitle": "Travel Agency",
+    "Title": "Welcome to Godownsme Global Resouses",
+    "Desc": "We bring the world to your door step. Godownsmeglobalresources, the light for the travels and tours industry.",
+    "icon": "FaPlane",
+    "heroimage": "61.jpg",
+    "id": "1",
+    "buttonText": "Make An Enquiry",
+    "videoButton": true,
+    "learnMoreButtonText": false,
+    "variationLeft": false
+  },
+  {
+    "subtitle": "Travel Agency",
+    "Title": "Vacation Packages",
+    "Desc": "G.O.M ✈✈✈ keeps u Happy while sorting your travel needs; hence they are called *Godownsme🥰🥰🥰",
+    "icon": "FaPlane",
+    "heroimage": "62.jpg",
+    "id": "2",
+    "buttonText": "Make An Enquiry",
+    "videoButton": false,
+    "learnMoreButtonText": false,
+    "variationLeft": false
+  },
+  {
+    "subtitle": "Travel Agency",
+    "Title": "Let's assist you with you Visa",
+    "Desc": "We can also render assistance for any Documents, PROOF OF FUND,company letters, any international payment. Etc*",
+    "icon": "FaPlane",
+    "heroimage": "62.jpg",
+    "id": "3",
+    "buttonText": "Make An Enquiry",
+    "videoButton": false,
+    "learnMoreButtonText": false,
+    "variationLeft": false
+  },
+  {
+    "subtitle": "Travel Agency",
+    "Title": "Study & Work",
+    "Desc": "We have one of the cheapest deal when it come  to admission Processing because we cooperate and licenced with more than  350 universities in the above countries for more inquiry",
+    "icon": "FaPlane",
+    "heroimage": "61.jpg",
+    "id": "4",
+    "buttonText": "Make An Enquiry",
+    "videoButton": true,
+    "learnMoreButtonText": false,
+    "variationLeft": false
+  }
+]

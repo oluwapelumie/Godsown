@@ -1,0 +1,30 @@
+[
+  {
+    "id": "1",
+    "name": "Jacob William",
+    "type": "selling Agents",
+    "img": "1.jpg",
+    "description": " Godsownme global resouces has provided us with a consistently high standard of service. Providing responsive, cost-effective and flexible services, we are happy with our choice to use Godsown global resouces."
+  },
+  {
+    "id": "2",
+    "name": "Samuel Aderobigbe",
+    "type": "selling Agents",
+    "img": "2.jpg",
+    "description": " The agency has been working for us a while now and has during the period of time exhibited a high level of efficiency and good quality outout in the field of travels and tourism."
+  },
+  {
+    "id": "3",
+    "name": "Adam Joseph",
+    "type": "selling Agents",
+    "img": "3.jpg",
+    "description": " Godsown global resouces is a service provider of consistently high quality over many years. We value our company's relationship with Godsown global resouces"
+  },
+  {
+    "id": "4",
+    "name": "James Carter",
+    "type": "Jacob Williamselling Agents",
+    "img": "4.jpg",
+    "description": " Godsown global resouces has been providing services to us for over 3 years. The quality of services and they have continuosly maintained competitive rates."
+  }
+]
