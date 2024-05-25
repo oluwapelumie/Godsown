@@ -9,7 +9,7 @@ const CallToAction = () => {
           <p>Chat with us on WhastApp</p>
         </div>
         <div className="btn-wrapper">
-          <Link className="btn btn-effect-3 btn-white" href="contact">
+          <Link className="btn btn-effect-3 btn-white" href="https://wa.link/bmlvic">
             WhatsApp <i className="icon-next"></i>
           </Link>
         </div>
