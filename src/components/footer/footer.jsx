@@ -68,18 +68,13 @@ const Footer = function () {
                   <div className="ltn__social-media mt-20">
                     <ul>
                       <li>
-                        <Link href="instagram.com/Godownsme_Global_resoure24" title="Facebook">
+                        <Link href="https://www.facebook.com/profile.php?id=61559288158129" title="Facebook">
                           <FaFacebookF />
                         </Link>
                       </li>
                       <li>
-                        <Link href="instagram.com/Godownsme_Global_resoure24" title="Twitter">
+                        <Link href="https://x.com/Godownsmeglobal" title="Twitter">
                           <FaTwitter />
-                        </Link>
-                      </li>
-                      <li>
-                        <Link href="instagram.com/Godownsme_Global_resoure24" title="Linkedin">
-                          <FaLinkedin />
                         </Link>
                       </li>
                       <li>
