@@ -51,7 +51,7 @@ function AboutUsStyleTwo({ sectionSpace }) {
                   </h6>
                   <h1 className="section-title">Our Core Serives</h1>
                   <p>
-                  We realize that to best serve our clients, we must provide the broadest product
+                  e realize that to best serve our clients, we must provide the broadest product
                   offerings in the most efficient manner using the latest technological solutions.
                   Therefore outside our general services we also offer amongst other things
                   </p>
