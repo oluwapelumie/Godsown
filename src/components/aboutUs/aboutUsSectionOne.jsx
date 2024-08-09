@@ -20,7 +20,7 @@ function AboutUsSectionOne() {
                   About Us
                 </h6>
                 <h1 className="section-title">
-                  Godownme Global Resouses
+                  Godownsme Global Resouses
                 </h1>
                 <p>
                 Godownsmeglobalresources a shades of all positivity
