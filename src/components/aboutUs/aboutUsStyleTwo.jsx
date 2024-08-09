@@ -11,6 +11,7 @@ import Download from "yet-another-react-lightbox/plugins/download";
 
 function AboutUsStyleTwo({ sectionSpace }) {
   const [index, setIndex] = useState(-1);
+  const [album, setAlbum] = useState(null);
 
   const slides = [
     {
@@ -30,13 +31,36 @@ function AboutUsStyleTwo({ sectionSpace }) {
     },
   ];
 
+  const testi = [
+    {
+      src: "/img/img-slide/test1.jpg",
+      width: 570,
+      height: 570,
+    },
+    {
+      src: "/img/img-slide/test2.jpg",
+      width: 570,
+      height: 570,
+    },
+    {
+      src: "/img/img-slide/test3.jpg",
+      width: 570,
+      height: 570,
+    },
+  ];
+
+  const handleOnClick = (albumName, index) => {
+    setAlbum(albumName);
+    setIndex(index);
+  };
+
   return (
     <>
       <Lightbox
         index={index}
         open={index >= 0}
         close={() => setIndex(-1)}
-        slides={slides}
+        slides={album === "slides" ? slides : testi}
         plugins={[Zoom, Counter, Fullscreen, Download]}
       />
 
@@ -51,7 +75,7 @@ function AboutUsStyleTwo({ sectionSpace }) {
                   </h6>
                   <h1 className="section-title">Our Core Serives</h1>
                   <p>
-                  e realize that to best serve our clients, we must provide the broadest product
+                  We realize that to best serve our clients, we must provide the broadest product
                   offerings in the most efficient manner using the latest technological solutions.
                   Therefore outside our general services we also offer amongst other things
                   </p>
@@ -139,7 +163,7 @@ We have one of the cheapest deal when it come  to admission Processing because w
                     layout="rows"
                     photos={slides}
                     targetRowHeight={150}
-                    onClick={({ index: current }) => setIndex(current)}
+                    onClick={({ index: current }) => handleOnClick("slides", current)}
                   />
                 </div>
               </div>
@@ -149,6 +173,16 @@ We have one of the cheapest deal when it come  to admission Processing because w
                 <img src="/img/others/9.png" alt="About Us Image" />
               </div>
             </Col>
+          </Row>
+          <Row>
+          <div className="ltn__list-item-2 ltn__list-item-2-img mb-50">
+                  <PhotoAlbum
+                    layout="rows"
+                    photos={testi}
+                    targetRowHeight={150}
+                    onClick={({ index: current }) => handleOnClick("testi", current)}
+                  />
+                </div>
           </Row>
         </Container>
       </div>
