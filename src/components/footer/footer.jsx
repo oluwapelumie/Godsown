@@ -57,7 +57,7 @@ const Footer = function () {
                         </div>
                         <div className="footer-address-info">
                           <p>
-                            <Link href="mailto:example@example.com">
+                            <Link href="mailto:godsownmeglobalresouses@gmail.com">
                               godsownmeglobalresouses@gmail.com
                             </Link>
                           </p>

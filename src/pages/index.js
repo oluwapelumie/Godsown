@@ -1,4 +1,5 @@
 import { useState } from "react";
+import React from "react";
 import Slider from "react-slick";
 import { LayoutOne } from "@/layouts";
 import { Container, Row, Col, Nav, Tab } from "react-bootstrap";
@@ -26,6 +27,22 @@ import BlogItem from "@/components/blog";
 import CallToAction from "@/components/callToAction";
 import heroData from '@/data/hero/index-two.json';
 
+import { Form } from "react-bootstrap";
+import {
+  FaDribbble,
+  FaInstagram,
+  FaTwitter,
+  FaFacebookF,
+  FaCheck,
+  FaCalendarAlt,
+  FaUserAlt,
+  FaEnvelope,
+  FaGlobe,
+  FaPencilAlt,
+  FaComments,
+  FaPhoneAlt,
+  FaArrowDown,
+} from "react-icons/fa";
 
 function HomeVersionTwo(props) {
   const [isOpen, setOpen] = useState(false);
@@ -33,6 +50,57 @@ function HomeVersionTwo(props) {
   const featureData = getProducts(featuresData, "buying", "featured", 3);
   const countryProducts = getProducts(products, "buying", "country", 5);
   const { data } = props;
+
+  const [name, setName] = useState('')
+  const [email, setEmail] = useState('')
+  const [phone, setPhone] = useState('')
+  const [subject, setSubject] = useState('')
+  const [message, setMessage] = useState('')
+  const [submitted, setSubmitted] = useState(false)
+
+  const handleSubmit = (e) => {
+
+    let formElement = e.target;
+  
+    if (formElement instanceof HTMLFormElement) {
+      formElement.reset();
+    }
+  
+    console.log('Sending');
+  
+    let data = {
+      name,
+      email,
+      phone,
+      subject,
+      message
+    };
+  
+    fetch('api/testi', {
+      method: 'POST',
+      headers: {
+        'Accept': 'application/json, text/plain, */*',
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify(data)
+    })
+    .then((res) => {
+      console.log('Response received');
+      if (res.status === 200) {
+        console.log('Response succeeded!');
+        setSubmitted(true);
+        setName('');
+        setEmail('');
+        setPhone('');
+        setSubject('');
+        setMessage('');
+        // setBody('');
+        // Refresh the form here
+        e.target.reset();
+      }
+    })
+  }
+
 
 
 
@@ -1147,6 +1215,96 @@ function HomeVersionTwo(props) {
         </Container>
       </div>
       {/* <!-- TESTIMONIAL AREA END -->
+
+             {/* <!-- CONTACT MESSAGE AREA START --> */}
+       <div className="ltn__contact-message-area mb-120 ">
+        <div className="container">
+          <div className="row">
+            <div className="col-lg-12">
+              <div className="ltn__form-box contact-form-box box-shadow white-bg">
+                <h4 className="title-2">Send A Message</h4>
+                <form id="contact-form" action="#" method="post">
+                  <div className="row">
+                    <div className="col-md-6">
+                      <div className="input-item input-item-name ltn__custom-icon">
+                        <input
+                          type="text"
+                          name="name"
+                          placeholder="Enter your name"
+                          onChange={(e)=>{setName(e.target.value)}}
+                        />
+                        <span className="inline-icon">
+                          <FaUserAlt />
+                        </span>
+                      </div>
+                    </div>
+                    <div className="col-md-6">
+                      <div className="input-item input-item-email ltn__custom-icon">
+                        <input
+                          type="email"
+                          name="email"
+                          placeholder="Enter email address"
+                          onChange={(e)=>{setEmail(e.target.value)}}
+                        />
+                        <span className="inline-icon">
+                          <FaEnvelope />
+                        </span>
+                      </div>
+                    </div>
+                    <div className="col-md-6">
+                      <div className="input-item input-item input-item-email ltn__custom-icon">
+                      <input
+                          type="text"
+                          name="Subject"
+                          placeholder="Enter Subject"
+                          onChange={(e)=>{setSubject(e.target.value)}}
+                        />
+                    <span className="inline-icon">
+                      <FaPencilAlt />
+                    </span>
+                      </div>
+                    </div>
+                    <div className="col-md-6">
+                      <div className="input-item input-item-phone ltn__custom-icon">
+                        <input
+                          type="text"
+                          name="phone"
+                          placeholder="Enter phone number"
+                          onChange={(e)=>{setPhone(e.target.value)}}
+                        />
+                        <span className="inline-icon">
+                          <FaPhoneAlt />
+                        </span>
+                      </div>
+                    </div>
+                  </div>
+                  <div className="input-item input-item-textarea ltn__custom-icon">
+                    <textarea
+                      name="message"
+                      placeholder="Enter message"
+                      onChange={(e)=>{setMessage(e.target.value)}}
+                    ></textarea>
+                    <span className="inline-icon">
+                      <FaPencilAlt />
+                    </span>
+                  </div>
+                  <div className="btn-wrapper mt-0">
+                    <button
+                      className="btn theme-btn-1 btn-effect-1 text-uppercase"
+                      type="submit"
+                      onClick={(e)=>{handleSubmit(e)}}
+                    >
+                      Submit
+                    </button>
+                  </div>
+                  <p className="form-messege mb-0 mt-20"></p>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      {/* <!-- CONTACT MESSAGE AREA END -->
 
     <!-- BLOG AREA START (blog-3) --> */}
       {/* <div className="ltn__blog-area pb-70">
